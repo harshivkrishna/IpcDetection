@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 # Step 1: Load the trained model and vectorizer
-model = joblib.load('text_classification_model.pkl')
+model = joblib.load('model.pkl')
 vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 # Step 2: Load the IPC punishment CSV file
