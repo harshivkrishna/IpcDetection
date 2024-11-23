@@ -8,9 +8,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Step 1: Load each CSV file
-df_theft_death_or_hurt = pd.read_csv(r"C:\Users\bhara\OneDrive\Documents\train2\theft\theft1.csv")
-df_theft_by_clerk = pd.read_csv(r"C:\Users\bhara\OneDrive\Documents\train2\theft\theft2.csv")
-df_theft_in_building = pd.read_csv(r"C:\Users\bhara\OneDrive\Documents\train2\theft\theft3.csv")
+df_theft_death_or_hurt = pd.read_csv(r"theft1.csv")
+df_theft_by_clerk = pd.read_csv(r"theft2.csv")
+df_theft_in_building = pd.read_csv(r"theft3.csv")
 
 # Step 2: Add a new column for the category
 df_theft_death_or_hurt['Category'] = 'Theft, after preparation having been made for causing death, or hurt, or restraint or fear of death, or of hurt or of restraint, in order to the committing of such theft, or to retiring after committing it, or to retaining property taken by it'
@@ -72,7 +72,7 @@ plt.show()
 
 # Step 13: Save the trained model and vectorizer
 import joblib
-joblib.dump(model, 'text_classification_model.pkl')
+joblib.dump(model, 'model.pkl')
 joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
 
 
